@@ -1,0 +1,38 @@
+16x16 grid of square divs (grid!)
+    should be in a container
+
+when the mouse hovers over the grid, it changes color
+    can do js or class (class!!)
+
+there should be a button at the top that clears
+the current grid and sends a popup asking how many squares
+per side it should be
+    needs to be same space as before!
+        container grid!
+        Max 100 x 100
+ -prompts
+ -buttons
+
+-optional (have it change color)
+ make it darker each time hmmmm
+    data- ?
+    
+
+// js thoughts // 
+- button
+    pompt! user for a number of sides
+    using that add divs to containing div
+        https://stackoverflow.com/questions/53937457/append-div-n-times-where-n-is-value-inside-another-html-div ??
+    also has to clear the applied class ( wes boss video again )
+
+- hover effect
+    for each div in container, add a listen event for
+    hover that adds a class (wes boss video) to that div
+    the class will change the color
+
+    other option is to inline style it which might
+    make the rgb work
+        https://stackoverflow.com/questions/15327990/generate-random-color-with-pure-css-no-javascript
+
+- should i try running tests?
+- how do i dynamically change the class I want to add
