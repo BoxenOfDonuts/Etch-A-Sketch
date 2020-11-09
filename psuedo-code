@@ -24,6 +24,8 @@ per side it should be
     using that add divs to containing div
         https://stackoverflow.com/questions/53937457/append-div-n-times-where-n-is-value-inside-another-html-div ??
     also has to clear the applied class ( wes boss video again )
+    
+    https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events
 
 - hover effect
     for each div in container, add a listen event for
@@ -33,6 +35,7 @@ per side it should be
     other option is to inline style it which might
     make the rgb work
         https://stackoverflow.com/questions/15327990/generate-random-color-with-pure-css-no-javascript
+        
 
 - should i try running tests?
 - how do i dynamically change the class I want to add
