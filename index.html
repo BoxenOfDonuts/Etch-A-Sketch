@@ -1,17 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Etch-A-Sketch</title>
-    <link rel="stylesheet" href="resources/index.css">
-</head>
-<body>
-    <button class="btn" id='clear' type="button">Clear</button>
-    <button class="btn" name='pen-color-rainbow' id ='rainbow' type="button">Rainbow</button>
-    <button class="btn" name='pen-color-pencil' id='pencil' type="button">Pencil</button>
-    <div class="container"></div>
-    <div class="click" onclick="myFunc()">click me</div>
-</body>
-<script src="resources/index.js"></script>
+    <link rel="stylesheet" href="resources/styles/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="settings">
+        <h1>Etch-A-Sketch</h1>
+        <hr />
+        <div class="options">
+          <button class="btn" id="clear" type="button">Clear</button>
+          <button
+            class="btn"
+            name="pen-color-rainbow"
+            id="rainbow"
+            type="button"
+          >
+            Rainbow
+          </button>
+          <button class="btn" name="pen-color-pencil" id="pencil" type="button">
+            Pencil
+          </button>
+        </div>
+      </div>
+      <div class="sketchContainer"></div>
+    </div>
+  </body>
+  <script src="resources/scripts/index.js"></script>
 </html>
