@@ -9,6 +9,11 @@
   --fill-color: #444042;
 }
 
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+}
+
 .container {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -29,16 +34,25 @@ hr {
   margin: 10px 0;
 }
 
-.options {
-  display: flex;
-  flex-direction: column;
-  align-content: flex-start;
-  align-items: center;
-  width: 150px;
+p {
+    font-size: 1.1rem;
 }
 
-.settings .btn {
-  margin-top: 10px;
+.options {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  align-items: center;
+}
+
+.options p, input, .btn {
+    margin: 5px;
+    padding: 5px 0;
+}
+
+.options > input[type="number"] {
+    width: 250px;
+    padding: 5px;
 }
 
 .sketchContainer {
@@ -57,7 +71,6 @@ hr {
   border-radius: 4px;
   min-width: 64px;
   width: 120px;
-  padding: 18px 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.875rem;
   text-transform: uppercase;

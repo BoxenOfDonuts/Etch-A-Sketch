@@ -1,5 +1,6 @@
 const container = document.querySelector(".sketchContainer");
-const clearButton = document.querySelector("#clear");
+const submitButton = document.querySelector("#submit");
+const  clearButton = document.querySelector("#clear");
 const rainbowButton = document.querySelectorAll(".btn");
 let colorSelection = "default";
 
@@ -20,23 +21,23 @@ function drawGrid(gridSize = 16) {
 }
 
 function clearAndDrawGrid(e) {
+  let newGridSize = Math.sqrt(container.childElementCount);
+  if (e.target.id === 'clear') {
+  } else {
+    let newGridSize = +document.querySelector('#grid-number').value;
+  }
+
   while (container.firstChild) {
     container.removeChild(container.firstChild);
   }
 
-  while (true) {
-    let newGridSize = parseInt(
-      prompt("Enter column and row size. Please choose less than 100")
-    );
-    if (isNaN(newGridSize)) {
-      alert("Not a number! try again!");
-    } else if (newGridSize > 100) {
-      alert("To Big! Try a number less than 100");
-    } else {
-      console.log(newGridSize);
-      drawGrid(newGridSize);
-      break;
-    }
+  if (isNaN(newGridSize) || newGridSize === 0) {
+    alert("Not a number! try again!");
+  } else if (newGridSize > 100) {
+    alert("To Big! Try a number less than 100");
+  } else {
+    console.log(newGridSize);
+    drawGrid(newGridSize);
   }
 }
 
@@ -80,6 +81,7 @@ function randomColor() {
 }
 
 container.addEventListener("load", drawGrid());
+submitButton.addEventListener("click", clearAndDrawGrid);
 clearButton.addEventListener("click", clearAndDrawGrid);
 container.addEventListener("mouseover", addGridColor);
 rainbowButton.forEach((button) =>
